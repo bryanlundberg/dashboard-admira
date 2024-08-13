@@ -1,0 +1,7 @@
+{
+  "leads": [
+    { "name": "Lead 1", "acquisitionCost": 200, "valueOfLife": 1000 },
+    { "name": "Lead 2", "acquisitionCost": 150, "valueOfLife": 750 }
+  ],
+  "rateConversion": 0.08
+}

@@ -1,0 +1,39 @@
+{
+  "campaigns": [
+    {
+      "name": "Campaña 1",
+      "impressions": 100000,
+      "clics": 15000,
+      "conversions": 2000,
+      "cost": 20000
+    },
+    {
+      "name": "Campaña 2",
+      "impressions": 200000,
+      "clics": 30000,
+      "conversions": 5000,
+      "cost": 35000
+    },
+    {
+      "name": "Campaña 3",
+      "impressions": 150000,
+      "clics": 25000,
+      "conversions": 3500,
+      "cost": 25000
+    },
+    {
+      "name": "Campaña 4",
+      "impressions": 250000,
+      "clics": 40000,
+      "conversions": 6000,
+      "cost": 45000
+    },
+    {
+      "name": "Campaña 5",
+      "impressions": 300000,
+      "clics": 50000,
+      "conversions": 7500,
+      "cost": 60000
+    }
+  ]
+}

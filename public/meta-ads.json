@@ -1,0 +1,49 @@
+{
+  "ads": [
+    {
+      "name": "Anuncio 1",
+      "range": 500000,
+      "participation": 30000,
+      "spendingAdvertising": 10000,
+      "conversions": 3000,
+      "clics": 12000,
+      "impressions": 50000
+    },
+    {
+      "name": "Anuncio 2",
+      "range": 750000,
+      "participation": 50000,
+      "spendingAdvertising": 15000,
+      "conversions": 4500,
+      "clics": 8000,
+      "impressions": 42000
+    },
+    {
+      "name": "Anuncio 3",
+      "range": 600000,
+      "participation": 40000,
+      "spendingAdvertising": 12000,
+      "conversions": 4000,
+      "clics": 9000,
+      "impressions": 46000
+    },
+    {
+      "name": "Anuncio 4",
+      "range": 850000,
+      "participation": 55000,
+      "spendingAdvertising": 16000,
+      "conversions": 5000,
+      "clics": 13000,
+      "impressions": 55000
+    },
+    {
+      "name": "Anuncio 5",
+      "range": 900000,
+      "participation": 60000,
+      "spendingAdvertising": 18000,
+      "conversions": 5500,
+      "clics": 15000,
+      "impressions": 60000
+    }
+  ]
+}

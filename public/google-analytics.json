@@ -1,0 +1,20 @@
+{
+  "viewsPage": [
+    { "date": "2024-08-01", "vistas": 300 },
+    { "date": "2024-08-02", "vistas": 450 }
+  ],
+  "sessions": [
+    { "date": "2024-08-01", "sessions": 200, "tasaRebound": 0.35 },
+    { "date": "2024-08-02", "sessions": 300, "tasaRebound": 0.4 }
+  ],
+  "demography": {
+    "age": [
+      { "range": "18-24", "percentage": 25 },
+      { "range": "25-34", "percentage": 40 }
+    ],
+    "gender": [
+      { "type": "hombre", "percentage": 55 },
+      { "type": "mujer", "percentage": 45 }
+    ]
+  }
+}
