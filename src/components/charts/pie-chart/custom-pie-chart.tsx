@@ -27,6 +27,7 @@ const CustomPieChart = ({ title, data }: CustomPieChartProps) => {
               fill="#ff0000"
               paddingAngle={0}
             >
+              {/* @ts-expect-error Here it's only needed the index value to iterate the COLORS variable. */}
               {data.map((entry, index) => (
                 <Cell
                   key={`cell-${index}`}
@@ -37,27 +38,6 @@ const CustomPieChart = ({ title, data }: CustomPieChartProps) => {
             <Tooltip label />
           </PieChart>
         </ResponsiveContainer>
-        {/* <ResponsiveContainer height={150} width="100%">
-          <PieChart className="bg-black">
-            <Pie
-              data={data}
-              cx={200 / 2}
-              cy={250 / 2}
-              innerRadius={50}
-              outerRadius={80}
-              fill="#8884d8"
-              paddingAngle={5}
-              dataKey="value"
-            >
-              {data.map((entry: any, index: number) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
-                />
-              ))}
-            </Pie>
-          </PieChart>
-        </ResponsiveContainer> */}
       </div>
     </>
   );
