@@ -1,4 +1,4 @@
-import { LineDataProps } from "../components/charts/area-chart/custom-line-chart";
+import { LineDataProps } from "../components/charts/line-chart/custom-line-chart";
 
 export const data: LineDataProps[] = [
   {

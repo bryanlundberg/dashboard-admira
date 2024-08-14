@@ -14,7 +14,7 @@ import { GoogleAds, MetaAds } from "./interfaces/api";
 import useKPI from "./hooks/useKPI";
 import Information from "./components/information/information";
 import Card from "./components/card/card";
-import CustomLineChart from "./components/charts/area-chart/custom-line-chart";
+import CustomLineChart from "./components/charts/line-chart/custom-line-chart";
 import { data } from "./data/data";
 import AdsAddComparison from "./components/ads-comparison/ads-add-comparison";
 
