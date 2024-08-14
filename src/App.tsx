@@ -11,12 +11,11 @@ import TableData from "./components/table/table-data";
 import TableContent from "./components/table/table-content";
 import useCRMProvider from "./hooks/useCRMProvider";
 import { GoogleAds, MetaAds } from "./interfaces/api";
-import useKPI from "./hooks/useKPI";
 import Information from "./components/information/information";
 import Card from "./components/card/card";
 import CustomLineChart from "./components/charts/line-chart/custom-line-chart";
-import { data } from "./data/data";
 import AdsAddComparison from "./components/ads-comparison/ads-add-comparison";
+import useDashboard from "./hooks/useDashboard";
 
 function App() {
   const { data: metaAds } = useCRMProvider<MetaAds>({
@@ -26,7 +25,11 @@ function App() {
     url: "/google-ads.json",
   });
 
-  const { KPI } = useKPI({ metaAds, googleAds });
+  const { KPI, linealOption, linealGraphData, handleChangeLinealOption } =
+    useDashboard({
+      metaAds,
+      googleAds,
+    });
 
   return (
     <>
@@ -59,11 +62,25 @@ function App() {
               <AdsAddComparison />
             </Container>
 
-            <Card className="w-full bg-white h-52">
-              <h2 className="mb-1 text-lg font-semibold text-center">
-                Gráfico Lineal
-              </h2>
-              <CustomLineChart data={data} />
+            <Card className="w-full bg-white h-96">
+              {/* header */}
+              <div className="flex justify-between px-3 mb-3">
+                <h2 className="mb-1 text-lg font-semibold text-center">
+                  {linealOption}
+                </h2>
+                <select
+                  className="border rounded-md ps-2"
+                  value={linealOption}
+                  onChange={(e) => handleChangeLinealOption(e)}
+                >
+                  <option value="clics">Clics</option>
+                  <option value="cost">Gasto</option>
+                  <option value="impressions">Impresiones</option>
+                  <option value="conversions">Conversiones</option>
+                </select>
+              </div>
+              {/* content */}
+              <CustomLineChart data={linealGraphData} />
             </Card>
 
             <KPIOverview className="grid grid-cols-1 my-10 sm:grid-cols-2 md:grid-cols-4">
