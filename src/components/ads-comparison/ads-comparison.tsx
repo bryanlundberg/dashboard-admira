@@ -37,30 +37,6 @@ const AdsComparison = ({
 
           <div className="grid grid-cols-2 pt-3">
             <div className="text-center">
-              <div className="text-sm">Gasto</div>
-              <div className="text-2xl font-semibold">{cost | 0}</div>
-              <div className="text-xs text-red-500">-36.7%</div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-sm">Conversiones</div>
-              <div className="text-2xl font-semibold">{conversions | 0}</div>
-              <div className="text-xs text-green-500">56.7%</div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-sm">Impresiones</div>
-              <div className="text-2xl font-semibold">{impressions | 0}</div>
-              <div className="text-xs text-red-500">-21.67%</div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-sm">Clicks</div>
-              <div className="text-2xl font-semibold">{clics | 0}</div>
-              <div className="text-xs text-green-500">2.3%</div>
-            </div>
-
-            <div className="text-center">
               <div className="text-sm">Tasa de clicks (CTR)</div>
               <div className="text-2xl font-semibold">
                 {(clics / impressions).toFixed(2)}

@@ -105,6 +105,7 @@ function App() {
                 </TableHeaderContent>
 
                 <TableContent>
+                  {/* This section can be improved implementing a  standard output for merging the different coming APIS responses. */}
                   {metaAds &&
                     metaAds.ads.map((i) => {
                       return (
