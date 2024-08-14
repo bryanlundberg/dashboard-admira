@@ -41,7 +41,6 @@ const AdsComparison = ({
               <div className="text-2xl font-semibold">
                 {(clics / impressions).toFixed(2)}
               </div>
-              <div className="text-xs text-green-500">2.3%</div>
             </div>
 
             <div className="text-center">
@@ -49,7 +48,6 @@ const AdsComparison = ({
               <div className="text-2xl font-semibold">
                 ${(cost / clics).toFixed(2)}
               </div>
-              <div className="text-xs text-green-500">2.3%</div>
             </div>
 
             <div className="text-center">
@@ -57,7 +55,6 @@ const AdsComparison = ({
               <div className="text-2xl font-semibold">
                 $ {(cost / impressions) * 1000}
               </div>
-              <div className="text-xs text-green-500">2.3%</div>
             </div>
 
             <div className="text-center">
@@ -65,7 +62,6 @@ const AdsComparison = ({
               <div className="text-2xl font-semibold">
                 ${(cost / conversions).toFixed(2)}
               </div>
-              <div className="text-xs text-green-500">2.3%</div>
             </div>
           </div>
         </Card>
