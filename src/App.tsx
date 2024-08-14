@@ -96,7 +96,7 @@ function App() {
               </h3>
               <Table className="w-full text-xs sm:text-sm">
                 <TableHeaderContent>
-                  <TableRow>
+                  <TableRow className="bg-neutral-200">
                     <TableData className="font-semibold text-start" header>
                       Campaña
                     </TableData>
@@ -126,7 +126,7 @@ function App() {
                   {metaAds &&
                     metaAds.ads.map((i) => {
                       return (
-                        <TableRow key={i.name}>
+                        <TableRow key={i.name} className="even:bg-neutral-50">
                           <TableData className="text-start">{i.name}</TableData>
                           <TableData className="hidden text-start sm:block">
                             Facebook Ads
@@ -148,7 +148,7 @@ function App() {
                   {googleAds &&
                     googleAds.campaigns.map((i) => {
                       return (
-                        <TableRow key={i.name}>
+                        <TableRow key={i.name} className="even:bg-neutral-50">
                           <TableData className="text-start">{i.name}</TableData>
                           <TableData className="hidden text-start sm:block">
                             Google Ads
