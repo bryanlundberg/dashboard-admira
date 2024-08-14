@@ -19,7 +19,9 @@ export const getTotalCampaignCosts = ({
   metaAds: MetaAds | null;
   googleAds: GoogleAds | null;
 }): PieDataProps[] => {
-  const totalCosts: PieDataProps[] = [...DEFAULT_PIE_DATA];
+  const totalCosts: PieDataProps[] = DEFAULT_PIE_DATA.map((data) => ({
+    ...data,
+  }));
 
   if (googleAds) {
     googleAds.campaigns.forEach((element) => {
@@ -43,7 +45,9 @@ export const getTotalCampaignImpressions = ({
   metaAds: MetaAds | null;
   googleAds: GoogleAds | null;
 }) => {
-  const totalImpressions: PieDataProps[] = [...DEFAULT_PIE_DATA];
+  const totalImpressions: PieDataProps[] = DEFAULT_PIE_DATA.map((data) => ({
+    ...data,
+  }));
 
   if (googleAds) {
     googleAds.campaigns.forEach((element) => {
@@ -67,7 +71,9 @@ export const getTotalCampaignConversions = ({
   metaAds: MetaAds | null;
   googleAds: GoogleAds | null;
 }) => {
-  const totalConversions: PieDataProps[] = [...DEFAULT_PIE_DATA];
+  const totalConversions: PieDataProps[] = DEFAULT_PIE_DATA.map((data) => ({
+    ...data,
+  }));
 
   if (googleAds) {
     googleAds.campaigns.forEach((element) => {
@@ -91,7 +97,9 @@ export const getTotalCampaignClicks = ({
   metaAds: MetaAds | null;
   googleAds: GoogleAds | null;
 }) => {
-  const totalClicks: PieDataProps[] = [...DEFAULT_PIE_DATA];
+  const totalClicks: PieDataProps[] = DEFAULT_PIE_DATA.map((data) => ({
+    ...data,
+  }));
 
   if (googleAds) {
     googleAds.campaigns.forEach((element) => {

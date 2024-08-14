@@ -16,10 +16,18 @@ const useKPI = ({
   googleAds: GoogleAds | null;
 }) => {
   const [KPI, setKPI] = useState({
-    Clics: [...DEFAULT_PIE_DATA],
-    Impressions: [...DEFAULT_PIE_DATA],
-    Conversions: [...DEFAULT_PIE_DATA],
-    Cost: [...DEFAULT_PIE_DATA],
+    Clics: DEFAULT_PIE_DATA.map((data) => ({
+      ...data,
+    })),
+    Impressions: DEFAULT_PIE_DATA.map((data) => ({
+      ...data,
+    })),
+    Conversions: DEFAULT_PIE_DATA.map((data) => ({
+      ...data,
+    })),
+    Cost: DEFAULT_PIE_DATA.map((data) => ({
+      ...data,
+    })),
   });
 
   useEffect(() => {
