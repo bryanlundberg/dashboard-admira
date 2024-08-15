@@ -2,9 +2,9 @@
   "campaigns": [
     {
       "name": "Campaña 1",
-      "impressions": 100000,
+      "impressions": 120500,
       "clics": 15000,
-      "conversions": 2000,
+      "conversions": 2539,
       "cost": 20000
     },
     {

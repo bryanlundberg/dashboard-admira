@@ -53,7 +53,7 @@ const AdsComparison = ({
             <div className="text-center">
               <div className="text-sm">Costo por Impresiones (CPM)</div>
               <div className="text-2xl font-semibold">
-                $ {(cost / impressions) * 1000}
+                $ {((cost / impressions) * 1000).toFixed(2)}
               </div>
             </div>
 

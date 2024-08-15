@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import { GoogleAds, MetaAds } from "../interfaces/api";
 
 interface useCRMProviderProps {
   url: string;
@@ -7,12 +6,7 @@ interface useCRMProviderProps {
 
 const useCRMProvider = <T>({ url }: useCRMProviderProps) => {
   const [data, setData] = useState<T | null>(null);
-  const [needUpdate, setNeedUpdate] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const triggerSync = () => {
-    setNeedUpdate(true);
-  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -21,9 +15,9 @@ const useCRMProvider = <T>({ url }: useCRMProviderProps) => {
       .then((data) => setData({ ...data }))
       .finally(() => setIsLoading(false))
       .catch((err) => console.log(err));
-  }, [needUpdate, url]);
+  }, [url]);
 
-  return { data, isLoading, triggerSync };
+  return { data, isLoading, setData };
 };
 
 export default useCRMProvider;

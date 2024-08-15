@@ -16,14 +16,17 @@ import Card from "./components/card/card";
 import CustomLineChart from "./components/charts/line-chart/custom-line-chart";
 import AdsAddComparison from "./components/ads-comparison/ads-add-comparison";
 import useDashboard from "./hooks/useDashboard";
+import { genNewGoogleData, genNewMetaData } from "./lib/genNewData";
 
 function App() {
-  const { data: metaAds } = useCRMProvider<MetaAds>({
-    url: "/meta-ads.json",
-  });
-  const { data: googleAds } = useCRMProvider<GoogleAds>({
-    url: "/google-ads.json",
-  });
+  const { data: metaAds, setData: handleRandomizeMetaAds } =
+    useCRMProvider<MetaAds>({
+      url: "/meta-ads.json",
+    });
+  const { data: googleAds, setData: handleRandomizeGoogleAds } =
+    useCRMProvider<GoogleAds>({
+      url: "/google-ads.json",
+    });
 
   const { KPI, linealOption, linealGraphData, handleChangeLinealOption } =
     useDashboard({
@@ -169,6 +172,16 @@ function App() {
             </CampaignPerformance>
           </Container>
         </Container>
+
+        <button
+          onClick={() => {
+            handleRandomizeMetaAds(genNewMetaData());
+            handleRandomizeGoogleAds(genNewGoogleData());
+          }}
+          className="fixed w-20 text-xs text-white border rounded-lg border-neutral-500 bg-neutral-700 bottom-3 left-3 h-14 animate-pulse"
+        >
+          Generar nuevos datos
+        </button>
       </MainLayout>
     </>
   );
